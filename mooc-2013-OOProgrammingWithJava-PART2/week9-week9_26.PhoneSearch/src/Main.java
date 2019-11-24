@@ -1,8 +1,11 @@
 
+import java.util.Scanner;
+import phonebook.ui.PhonebookUI;
+
+
 public class Main {
 
     public static void main(String[] args) {
-        // Start your program here
-        // ATTENTION: In your program, you can create only one instance of class Scanner!
+        new PhonebookUI(new Scanner(System.in)).run();
     }
 }
