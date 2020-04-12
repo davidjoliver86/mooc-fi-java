@@ -7,6 +7,20 @@ public class Main {
     }
 
     public static String build(int[] t) {
-        return "{\n}\n";
+        StringBuilder sb = new StringBuilder();
+        sb.append("{\n ");
+        int len = t.length;
+        for (int i = 0; i < len; i++) {
+            sb.append(t[i]);
+            if (i != (len - 1)) {
+                if (i % 4 == 3) {
+                    sb.append(",\n ");
+                } else {
+                    sb.append(", ");
+                }
+            }
+        }
+        sb.append("\n}");
+        return sb.toString();
     }
 }
